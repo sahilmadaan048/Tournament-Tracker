@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace TrackerLibrary
 {
-    internal class PersonModel
+    public class PersonModel
     {
+        /// <summary>
+        /// represents the first name of the person
+        /// </summary>
+        public string FirstName { get; set; }
+        /// <summary>
+        /// represents the last name of the person
+        /// </summary>
+        public string LastName { get; set; }
+        /// <summary>
+        /// represnts the email address of the person
+        /// </summary>
+        public string EmailAddress { get; set; }
+        /// <summary>
+        /// represents the cell phone number of the person
+        /// </summary>
+        public string CellPhoneNumber { get; set; }
     }
 }
