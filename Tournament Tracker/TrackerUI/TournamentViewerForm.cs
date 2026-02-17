@@ -47,7 +47,7 @@ namespace TrackerUI
             teamTwoScoreValue = new TextBox();
             teamTwoScoreLabel = new Label();
             teamTwoName = new Label();
-            VERSUSlABEL = new Label();
+            versusLabel = new Label();
             scoreButton = new Button();
             SuspendLayout();
             // 
@@ -175,16 +175,16 @@ namespace TrackerUI
             teamTwoName.TabIndex = 9;
             teamTwoName.Text = "<team two>";
             // 
-            // VERSUSlABEL
+            // versusLabel
             // 
-            VERSUSlABEL.AutoSize = true;
-            VERSUSlABEL.Font = new Font("Segoe UI", 20F);
-            VERSUSlABEL.ForeColor = Color.FromArgb(51, 151, 255);
-            VERSUSlABEL.Location = new Point(591, 359);
-            VERSUSlABEL.Name = "VERSUSlABEL";
-            VERSUSlABEL.Size = new Size(87, 46);
-            VERSUSlABEL.TabIndex = 12;
-            VERSUSlABEL.Text = "-VS-";
+            versusLabel.AutoSize = true;
+            versusLabel.Font = new Font("Segoe UI", 20F);
+            versusLabel.ForeColor = Color.FromArgb(51, 151, 255);
+            versusLabel.Location = new Point(591, 359);
+            versusLabel.Name = "versusLabel";
+            versusLabel.Size = new Size(87, 46);
+            versusLabel.TabIndex = 12;
+            versusLabel.Text = "-VS-";
             // 
             // scoreButton
             // 
@@ -200,11 +200,12 @@ namespace TrackerUI
             scoreButton.Text = "Score";
             scoreButton.UseVisualStyleBackColor = true;
             // 
-            // TournamentViewerLabel
+            // TournamentViewerForm
             // 
+            BackColor = Color.White;
             ClientSize = new Size(924, 631);
             Controls.Add(scoreButton);
-            Controls.Add(VERSUSlABEL);
+            Controls.Add(versusLabel);
             Controls.Add(teamTwoScoreValue);
             Controls.Add(teamTwoScoreLabel);
             Controls.Add(teamTwoName);
@@ -219,7 +220,8 @@ namespace TrackerUI
             Controls.Add(headerLabel);
             Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ForeColor = SystemColors.MenuHighlight;
-            Name = "TournamentViewerLabel";
+            Name = "TournamentViewerForm";
+            StartPosition = FormStartPosition.Manual;
             Text = "Tournament Viewer";
             ResumeLayout(false);
             PerformLayout();
@@ -256,7 +258,7 @@ namespace TrackerUI
         private TextBox teamTwoScoreValue;
         private Label teamTwoScoreLabel;
         private Label teamTwoName;
-        private Label VERSUSlABEL;
+        private Label versusLabel;
         private Button scoreButton;
     }
 }

@@ -10,7 +10,19 @@ namespace TrackerUI
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
             ApplicationConfiguration.Initialize();
+
+            ///
+            /// keep in mind that the form that should be named as  TournamentViewerForm 
+            /// is actually being served its action by the TournamentViewerLabel form, 
+            /// which is the one that is being called in the Application.Run() method.
+            /// so if we want to show / use the TournamentViewerForm form, we should call 
+            /// the TournamentViewerLabel finction instead because of some stupid naming erro i did yesterday and 
+            /// did not delete all the hidden filed properly before pushing the code to the github repo
+            ///
+
             Application.Run(new TournamentViewerLabel());
         }
     }
