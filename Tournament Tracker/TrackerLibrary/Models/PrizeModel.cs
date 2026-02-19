@@ -33,7 +33,7 @@ namespace TrackerLibrary.Models
         /// <summary>
         /// The unique identifier for the proze
         /// </summary>
-        public int id { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// represnts the name of the prize

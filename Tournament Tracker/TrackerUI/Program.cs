@@ -1,5 +1,4 @@
 using Microsoft.Extensions.Configuration;
-using TrackerLibrary.DataAccess;
 using TrackerLibrary;
 
 namespace TrackerUI
@@ -21,6 +20,7 @@ namespace TrackerUI
 
             // Initialize database connections
             GlobalConfig.InitializeConnections(DatabaseType.Sql, config);
+            GlobalConfig.InitializeConnections(DatabaseType.TextFile, config);
 
 
             // To customize application configuration such as set high DPI settings or default font,
