@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TrackerLibrary\TrackerLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="TournamentViewerForm.resx">
       <Generator></Generator>
     </EmbeddedResource>

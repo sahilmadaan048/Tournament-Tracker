@@ -23,11 +23,14 @@ namespace TrackerUI
             /// did not delete all the hidden filed properly before pushing the code to the github repo
             ///
 
-            Application.Run(new TournamentDashboardForm());
-            Application.Run(new TournamentViewerLabel());
+            // Initialise the database connections
+            TrackerLibrary.GlobalConfig.InitializeConnections(true, true);
+
+            //Application.Run(new TournamentDashboardForm());
+            //Application.Run(new TournamentViewerLabel());
             Application.Run(new CreatePrizeForm());
-            Application.Run(new CreateTeamForm());
-            Application.Run(new CreateTournamentForm());
+            //Application.Run(new CreateTeamForm());
+            //Application.Run(new CreateTournamentForm());
         }
     }
 }

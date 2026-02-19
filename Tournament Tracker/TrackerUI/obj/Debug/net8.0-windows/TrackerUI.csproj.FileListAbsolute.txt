@@ -19,3 +19,8 @@ D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerUI\obj\Debug\net8.
 D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerUI\obj\Debug\net8.0-windows\TrackerUI.CreateTeamForm.resources
 D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerUI\obj\Debug\net8.0-windows\TrackerUI.CreateTournamentForm.resources
 D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerUI\obj\Debug\net8.0-windows\TrackerUI.TournamentDashboardForm.resources
+D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerUI\obj\Debug\net8.0-windows\TrackerUI.temp.resources
+D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerUI\bin\Debug\net8.0-windows\TrackerLibrary.dll
+D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerUI\bin\Debug\net8.0-windows\TrackerLibrary.pdb
+D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerUI\obj\Debug\net8.0-windows\TrackerUI.csproj.AssemblyReference.cache
+D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerUI\obj\Debug\net8.0-windows\TrackerUI.csproj.Up2Date

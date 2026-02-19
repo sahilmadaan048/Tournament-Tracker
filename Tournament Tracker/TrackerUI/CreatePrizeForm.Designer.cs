@@ -59,7 +59,6 @@
             placeNumberValue.Size = new Size(214, 43);
             placeNumberValue.TabIndex = 24;
             placeNumberValue.Text = " ";
-            placeNumberValue.TextChanged += placeNumberValue_TextChanged;
             // 
             // placeNumberLabel
             // 
@@ -78,7 +77,7 @@
             prizePercentageValue.Name = "prizePercentageValue";
             prizePercentageValue.Size = new Size(214, 43);
             prizePercentageValue.TabIndex = 26;
-            prizePercentageValue.Text = " ";
+            prizePercentageValue.Text = " 0";
             // 
             // prizePercentageLabel
             // 
@@ -97,7 +96,7 @@
             prizeAmountValue.Name = "prizeAmountValue";
             prizeAmountValue.Size = new Size(214, 43);
             prizeAmountValue.TabIndex = 28;
-            prizeAmountValue.Text = " ";
+            prizeAmountValue.Text = " 0";
             // 
             // prizeAmountLabel
             // 
@@ -154,13 +153,14 @@
             createPrizeButton.TabIndex = 32;
             createPrizeButton.Text = "Create Prize";
             createPrizeButton.UseVisualStyleBackColor = true;
+            createPrizeButton.Click += createPrizeButton_Click;
             // 
             // CreatePrizeForm
             // 
             AutoScaleDimensions = new SizeF(15F, 37F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(583, 671);
+            ClientSize = new Size(611, 647);
             Controls.Add(createPrizeButton);
             Controls.Add(orLabel);
             Controls.Add(placeNameValue);
@@ -172,6 +172,7 @@
             Controls.Add(placeNumberValue);
             Controls.Add(placeNumberLabel);
             Controls.Add(createPrizeLabel);
+            DoubleBuffered = true;
             Font = new Font("Segoe UI", 16F);
             Margin = new Padding(6);
             Name = "CreatePrizeForm";

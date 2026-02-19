@@ -1,0 +1,30 @@
+- Prizes form logic
+- pseudo code 
+
+
+if( usingSQL == true) {
+    open database connection
+    save the data in tje database
+    get back the updated model
+}
+
+if (usingTextFile == true) {
+    open text file 
+    genereate id 
+    save the data 
+}
+
+this is dry code 
+not rerally scalable
+
+if (using mySql == true) ...
+
+
+--------- better way ------------
+
+how do we get back that connection information ?        [kinda like a global variable]
+how do we connect to 2 different data sources (text file of database) to do the same task
+
+
+Static class for data source info 
+interface for data sources

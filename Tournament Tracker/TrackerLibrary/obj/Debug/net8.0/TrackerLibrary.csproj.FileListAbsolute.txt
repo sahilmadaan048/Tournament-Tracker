@@ -1,0 +1,12 @@
+D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerLibrary\bin\Debug\net8.0\TrackerLibrary.deps.json
+D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerLibrary\bin\Debug\net8.0\TrackerLibrary.dll
+D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerLibrary\bin\Debug\net8.0\TrackerLibrary.pdb
+D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerLibrary\obj\Debug\net8.0\TrackerLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerLibrary\obj\Debug\net8.0\TrackerLibrary.AssemblyInfoInputs.cache
+D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerLibrary\obj\Debug\net8.0\TrackerLibrary.AssemblyInfo.cs
+D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerLibrary\obj\Debug\net8.0\TrackerLibrary.csproj.CoreCompileInputs.cache
+D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerLibrary\obj\Debug\net8.0\TrackerLibrary.sourcelink.json
+D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerLibrary\obj\Debug\net8.0\TrackerLibrary.dll
+D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerLibrary\obj\Debug\net8.0\refint\TrackerLibrary.dll
+D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerLibrary\obj\Debug\net8.0\TrackerLibrary.pdb
+D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerLibrary\obj\Debug\net8.0\ref\TrackerLibrary.dll
