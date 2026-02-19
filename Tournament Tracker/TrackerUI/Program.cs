@@ -1,3 +1,7 @@
+using Microsoft.Extensions.Configuration;
+using TrackerLibrary.DataAccess;
+using TrackerLibrary;
+
 namespace TrackerUI
 {
     internal static class Program
@@ -8,6 +12,17 @@ namespace TrackerUI
         [STAThread]
         static void Main()
         {
+
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+
+            IConfiguration config = builder.Build();
+
+            // Initialize database connections
+            GlobalConfig.InitializeConnections(DatabaseType.Sql, config);
+
+
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             Application.EnableVisualStyles();
@@ -22,9 +37,6 @@ namespace TrackerUI
             /// the TournamentViewerLabel finction instead because of some stupid naming erro i did yesterday and 
             /// did not delete all the hidden filed properly before pushing the code to the github repo
             ///
-
-            // Initialise the database connections
-            TrackerLibrary.GlobalConfig.InitializeConnections(true, true);
 
             //Application.Run(new TournamentDashboardForm());
             //Application.Run(new TournamentViewerLabel());

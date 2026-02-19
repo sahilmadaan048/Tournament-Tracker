@@ -10,3 +10,4 @@ D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerLibrary\obj\Debug\
 D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerLibrary\obj\Debug\net8.0\refint\TrackerLibrary.dll
 D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerLibrary\obj\Debug\net8.0\TrackerLibrary.pdb
 D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerLibrary\obj\Debug\net8.0\ref\TrackerLibrary.dll
+D:\Code_Everyday\Tournament-Tracker\Tournament Tracker\TrackerLibrary\obj\Debug\net8.0\TrackerLibrary.csproj.AssemblyReference.cache
