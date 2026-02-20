@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TrackerLibrary.DataAccess;
 using Microsoft.Extensions.Configuration;
+using TrackerLibrary.DataAccess.TextConnector;
 
 namespace TrackerLibrary
 {

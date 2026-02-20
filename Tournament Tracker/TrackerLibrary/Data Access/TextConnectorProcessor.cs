@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using Azure.Core;
@@ -77,10 +78,21 @@ namespace TrackerLibrary.Data_Access
 
             foreach (PrizeModel p in models)
             {
-                lines.Add($"{p.Id},{p.PlaceNumber},{p.PlaceName},{p.PrizeAmount},{p.PrizePercentage}");
+                lines.Add($"{p.Id },{p.PlaceNumber },{p.PlaceName },{p.PrizeAmount },{p.PrizePercentage}");
             }
 
             File.WriteAllLines(GlobalConfig.PrizesFile.FullFilePath(), lines);
+        }
+
+        public static void SaveToPeopleFile(this List<PersonModel> models)
+        {
+            List<string> lines = new List<string>();
+
+            foreach (PersonModel p in models)
+            {
+                lines.Add($"{p.Id },{p.FirstName },{p.LastName },{p.EmailAddress },{p.CellPhoneNumber}");
+            }
+            File.WriteAllLines(GlobalConfig.PeopleFile.FullFilePath(), lines);
         }
 
     }

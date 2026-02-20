@@ -19,7 +19,7 @@ namespace TrackerUI
             IConfiguration config = builder.Build();
 
             // Initialize database connections
-            GlobalConfig.InitializeConnections(DatabaseType.Sql, config);
+            //GlobalConfig.InitializeConnections(DatabaseType.Sql, config);
             GlobalConfig.InitializeConnections(DatabaseType.TextFile, config);
 
 
@@ -40,8 +40,8 @@ namespace TrackerUI
 
             //Application.Run(new TournamentDashboardForm());
             //Application.Run(new TournamentViewerLabel());
-            Application.Run(new CreatePrizeForm());
-            //Application.Run(new CreateTeamForm());
+            //Application.Run(new CreatePrizeForm());
+            Application.Run(new CreateTeamForm());
             //Application.Run(new CreateTournamentForm());
         }
     }
