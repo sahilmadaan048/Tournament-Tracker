@@ -20,7 +20,7 @@ namespace TrackerUI
         public CreateTeamForm()
         {
             InitializeComponent();
-            CreateSampleData();
+            //CreateSampleData();
             WireUpLists();
         }
 

@@ -58,9 +58,31 @@ namespace TrackerLibrary.DataAccess.TextConnector
             return model;
         }
 
+        /// <summary>
+        /// adds a new table to a text file
+        /// </summary>
+        /// <param name="model">The team information</param>
+        /// <returns>The team information plus the unique identifier</returns>
+        /// <exception cref="NotImplementedException"></exception>
         public TeamModel CreateTeam(TeamModel model)
         {
-            throw new NotImplementedException();
+            List<TeamModel> teams = GlobalConfig.TeamFile.FullFilePath().LoadFile().ConvertToTeamModels();
+
+            // find the max ID
+            int currentId = 1;
+
+            if(teams.Count > 0)
+            {
+                currentId = teams.OrderByDescending(x => x.Id).First().Id + 1;
+            }
+
+            model.Id = currentId;
+
+            teams.Add(model);
+
+            teams.SaveToTeamFile();
+
+            return model;
         }
 
 
