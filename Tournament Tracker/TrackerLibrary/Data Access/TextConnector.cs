@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
@@ -93,30 +94,31 @@ namespace TrackerLibrary.DataAccess.TextConnector
             return model;
         }
 
-        //public void CreateTournament(TournamentModel model)
-        //{
-        //    List<TournamentModel> tournaments = GlobalConfig.TournamentFile
-        //        .FullFilePath()
-        //        .LoadFile()
-        //        .ConvertToTournamentModels();
+        public void CreateTournament(TournamentModel model)
+        {
+            List<TournamentModel> tournaments = GlobalConfig.TournamentFile
+                .FullFilePath()
+                .LoadFile()
+                .ConvertToTournamentModels();
 
-        //    int currentId = 1;
+            int currentId = 1;
 
-        //    if (tournaments.Count > 0)
-        //    {
-        //        currentId = tournaments.OrderByDescending(x => x.Id).First().Id + 1;
-        //    }
+            if (tournaments.Count > 0)
+            {
+                currentId = tournaments.OrderByDescending(x => x.Id).First().Id + 1;
+            }
 
-        //    model.Id = currentId;
+            model.Id = currentId;
 
-        //    model.SaveRoundsToFile();
+            model.SaveRoundsToFile();
 
-        //    tournaments.Add(model);
+            tournaments.Add(model);
 
-        //    tournaments.SaveToTournamentFile();
+            tournaments.SaveToTournamentFile();
 
-        //    TournamentLogic.UpdateTournamentResults(model);
-        //}
+            //TournamentLogic.UpdateTournamentResults(model);
+        }
+
 
         /// <summary>
         /// Returns a list of all people from a text file
@@ -137,11 +139,6 @@ namespace TrackerLibrary.DataAccess.TextConnector
         }
 
         public List<TournamentModel> GetTournament_All()
-        {
-            throw new NotImplementedException();
-        }
-
-        TournamentModel IDataConnection.CreateTournament(TournamentModel model)
         {
             throw new NotImplementedException();
         }

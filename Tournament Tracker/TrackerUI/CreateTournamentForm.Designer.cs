@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             headerLabel = new Label();
-            tournamentNameValueValue = new TextBox();
+            tournamentNameValue = new TextBox();
             tournamentNameLabel = new Label();
             entryFeeValue = new TextBox();
             entryFeeLabel = new Label();
@@ -58,12 +58,12 @@
             headerLabel.TabIndex = 1;
             headerLabel.Text = "Create Tournament ";
             // 
-            // tournamentNameValueValue
+            // tournamentNameValue
             // 
-            tournamentNameValueValue.Location = new Point(46, 172);
-            tournamentNameValueValue.Name = "tournamentNameValueValue";
-            tournamentNameValueValue.Size = new Size(404, 43);
-            tournamentNameValueValue.TabIndex = 10;
+            tournamentNameValue.Location = new Point(46, 172);
+            tournamentNameValue.Name = "tournamentNameValue";
+            tournamentNameValue.Size = new Size(404, 43);
+            tournamentNameValue.TabIndex = 10;
             // 
             // tournamentNameLabel
             // 
@@ -238,6 +238,7 @@
             createTournamentButton.TabIndex = 24;
             createTournamentButton.Text = "Create Tournament";
             createTournamentButton.UseVisualStyleBackColor = true;
+            createTournamentButton.Click += createTournamentButton_Click;
             // 
             // CreateTournamentForm
             // 
@@ -259,7 +260,7 @@
             Controls.Add(selectTeamLabel);
             Controls.Add(entryFeeValue);
             Controls.Add(entryFeeLabel);
-            Controls.Add(tournamentNameValueValue);
+            Controls.Add(tournamentNameValue);
             Controls.Add(tournamentNameLabel);
             Controls.Add(headerLabel);
             Font = new Font("Segoe UI", 16F);
@@ -273,7 +274,7 @@
         #endregion
 
         private Label headerLabel;
-        private TextBox tournamentNameValueValue;
+        private TextBox tournamentNameValue;
         private Label tournamentNameLabel;
         private TextBox entryFeeValue;
         private Label entryFeeLabel;

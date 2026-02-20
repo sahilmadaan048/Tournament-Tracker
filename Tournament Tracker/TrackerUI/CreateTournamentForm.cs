@@ -43,7 +43,7 @@ namespace TrackerUI
             TeamModel t = (TeamModel)selectTeamDropDown.SelectedItem;
 
             if (t != null)
-            {   
+            {
                 availableTeams.Remove(t);
                 selectedTeams.Add(t);
 
@@ -105,5 +105,37 @@ namespace TrackerUI
             }
         }
 
+        private void createTournamentButton_Click(object sender, EventArgs e)
+        {
+            // create tournament entry
+            // create all of the prizes entries
+            // create all of the team entries 
+            // create our matchups 
+
+            // validate data
+            decimal fee = 0;
+
+            bool feeAcceptable = decimal.TryParse(entryFeeValue.Text, out fee);
+
+            if(!feeAcceptable)
+            {
+                MessageBox.Show("You need to enter a valid Entry Fee.", "Invalid Fee", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            // Create our Tournament
+            TournamentModel tm = new TournamentModel
+            {
+                TournamentName = tournamentNameValue.Text,
+                EntryFee = fee,
+                Prizes = selectedPrizes,
+                EnteredTeams = selectedTeams
+            };
+
+            // wire our matchups
+
+
+            GlobalConfig.Connection.CreateTournament(tm);
+            this.Close();
+        }
     }
 }

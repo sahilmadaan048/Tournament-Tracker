@@ -19,8 +19,8 @@ namespace TrackerUI
             IConfiguration config = builder.Build();
 
             // Initialize database connections
-            GlobalConfig.InitializeConnections(DatabaseType.Sql, config);
-            //GlobalConfig.InitializeConnections(DatabaseType.TextFile, config);
+            //GlobalConfig.InitializeConnections(DatabaseType.Sql, config);
+            GlobalConfig.InitializeConnections(DatabaseType.TextFile, config);
 
 
             // To customize application configuration such as set high DPI settings or default font,

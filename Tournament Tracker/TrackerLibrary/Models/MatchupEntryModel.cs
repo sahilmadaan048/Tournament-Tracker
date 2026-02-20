@@ -9,6 +9,10 @@ namespace TrackerLibrary.Models
     public class MatchupEntryModel
     {
         /// <summary>
+        /// gives us the unique iudentifier for the matchup entry
+        /// </summary>
+        public int Id { get; set; }
+        /// <summary>
         /// represents one team in the matchup. 
         /// It is possible to have a bye in the first round, so this may not be populated.
         /// </summary>
