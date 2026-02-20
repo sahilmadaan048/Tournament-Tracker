@@ -17,6 +17,7 @@ namespace TrackerUI
     {
         public List<PersonModel> availableTeamMembers = GlobalConfig.Connection.GetPerson_All();
         public List<PersonModel> selectedTeamMembers = new List<PersonModel>();
+        //private ITeamRequester callingForm;
         public CreateTeamForm()
         {
             InitializeComponent();

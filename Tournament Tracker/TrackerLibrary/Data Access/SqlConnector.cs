@@ -14,6 +14,11 @@ namespace TrackerLibrary.DataAccess
     {
         private const string db = "Tournaments";
 
+        public TournamentModel CompleteTournament(TournamentModel model)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Sves a new person to the database
         /// </summary>
@@ -85,6 +90,12 @@ namespace TrackerLibrary.DataAccess
                 return model;
             }
         }
+
+        public TournamentModel CreateTournament(TournamentModel model)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Returns a list of all people fropm the database
         /// </summary>
@@ -110,7 +121,7 @@ namespace TrackerLibrary.DataAccess
 
             using (IDbConnection connection = new SqlConnection(GlobalConfig.CnnString(db)))
             {
-                output = connection.Query<TeamModel>("[dbo].[spTeams_GetAll]", new { }, commandType: CommandType.StoredProcedure).ToList();
+                output = connection.Query<TeamModel>("[dbo].[spTeam_GetAll]", new { }, commandType: CommandType.StoredProcedure).ToList();
 
 
                 foreach (TeamModel team in output)
@@ -123,6 +134,11 @@ namespace TrackerLibrary.DataAccess
             }
 
             return output;
+        }
+
+        public List<TournamentModel> GetTournament_All()
+        {
+            throw new NotImplementedException();
         }
     }
 }
