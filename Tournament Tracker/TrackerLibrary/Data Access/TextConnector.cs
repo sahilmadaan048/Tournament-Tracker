@@ -62,5 +62,24 @@ namespace TrackerLibrary.DataAccess.TextConnector
         {
             throw new NotImplementedException();
         }
+
+
+        /// <summary>
+        /// Returns a list of all people from a text file
+        /// </summary>
+        /// <returns>List of person information</returns>
+        public List<PersonModel> GetPerson_All()
+        {
+            return GlobalConfig.PeopleFile.FullFilePath().LoadFile().ConvertToPersonModels();
+        }
+
+        /// <summary>
+        /// Returns a list of all teams from a text file
+        /// </summary>
+        /// <returns>List of team information</returns>
+        public List<TeamModel> GetTeam_All()
+        {
+            return GlobalConfig.TeamFile.FullFilePath().LoadFile().ConvertToTeamModels();
+        }
     }
 }

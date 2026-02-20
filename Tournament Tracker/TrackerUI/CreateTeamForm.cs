@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.DirectoryServices.ActiveDirectory;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,8 +15,8 @@ namespace TrackerUI
 {
     public partial class CreateTeamForm : Form
     {
+        public List<PersonModel> availableTeamMembers = GlobalConfig.Connection.GetPerson_All();
         public List<PersonModel> selectedTeamMembers = new List<PersonModel>();
-        public List<PersonModel> availableTeamMembers = new List<PersonModel>();
         public CreateTeamForm()
         {
             InitializeComponent();
