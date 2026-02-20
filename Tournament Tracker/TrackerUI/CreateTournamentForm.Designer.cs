@@ -75,7 +75,6 @@
             tournamentNameLabel.Size = new Size(298, 46);
             tournamentNameLabel.TabIndex = 9;
             tournamentNameLabel.Text = "Tournament Name";
-            tournamentNameLabel.Click += teamOneScoreLabel_Click;
             // 
             // entryFeeValue
             // 
@@ -84,7 +83,6 @@
             entryFeeValue.Size = new Size(158, 43);
             entryFeeValue.TabIndex = 12;
             entryFeeValue.Text = "0";
-            entryFeeValue.TextChanged += teamOneScoreValue_TextChanged;
             // 
             // entryFeeLabel
             // 
@@ -96,7 +94,6 @@
             entryFeeLabel.Size = new Size(158, 46);
             entryFeeLabel.TabIndex = 11;
             entryFeeLabel.Text = "Entry Fee";
-            entryFeeLabel.Click += teamOneScoreLabel_Click_1;
             // 
             // selectTeamDropDown
             // 
@@ -105,7 +102,6 @@
             selectTeamDropDown.Name = "selectTeamDropDown";
             selectTeamDropDown.Size = new Size(404, 45);
             selectTeamDropDown.TabIndex = 14;
-            selectTeamDropDown.SelectedIndexChanged += roundDropDown_SelectedIndexChanged;
             // 
             // selectTeamLabel
             // 
@@ -117,7 +113,6 @@
             selectTeamLabel.Size = new Size(198, 46);
             selectTeamLabel.TabIndex = 13;
             selectTeamLabel.Text = "Select Team";
-            selectTeamLabel.Click += roundLabel_Click;
             // 
             // createNewTeamLink
             // 
@@ -128,6 +123,7 @@
             createNewTeamLink.TabIndex = 15;
             createNewTeamLink.TabStop = true;
             createNewTeamLink.Text = "create new";
+            createNewTeamLink.LinkClicked += createNewTeamLink_LinkClicked;
             // 
             // addTeamButton
             // 
@@ -167,7 +163,6 @@
             tournamentTeamsListBox.Name = "tournamentTeamsListBox";
             tournamentTeamsListBox.Size = new Size(347, 189);
             tournamentTeamsListBox.TabIndex = 18;
-            tournamentTeamsListBox.SelectedIndexChanged += tournamentTeamsListBox_SelectedIndexChanged;
             // 
             // tournamentPlayersLabel
             // 
@@ -179,7 +174,6 @@
             tournamentPlayersLabel.Size = new Size(248, 46);
             tournamentPlayersLabel.TabIndex = 19;
             tournamentPlayersLabel.Text = "Teams / Players";
-            tournamentPlayersLabel.Click += tournamentPlayersLabel_Click;
             // 
             // deleteSelectedPlayersButton
             // 
@@ -192,9 +186,9 @@
             deleteSelectedPlayersButton.Name = "deleteSelectedPlayersButton";
             deleteSelectedPlayersButton.Size = new Size(149, 95);
             deleteSelectedPlayersButton.TabIndex = 20;
-            deleteSelectedPlayersButton.Text = "Delete Selected";
+            deleteSelectedPlayersButton.Text = "Remove Selected";
             deleteSelectedPlayersButton.UseVisualStyleBackColor = true;
-            deleteSelectedPlayersButton.Click += button1_Click;
+            deleteSelectedPlayersButton.Click += removeSelectedPlayersButton_Click;
             // 
             // deleteSelectedPrizeButton
             // 
@@ -207,9 +201,9 @@
             deleteSelectedPrizeButton.Name = "deleteSelectedPrizeButton";
             deleteSelectedPrizeButton.Size = new Size(149, 100);
             deleteSelectedPrizeButton.TabIndex = 23;
-            deleteSelectedPrizeButton.Text = "Delete Selected";
+            deleteSelectedPrizeButton.Text = "Remove Selected";
             deleteSelectedPrizeButton.UseVisualStyleBackColor = true;
-            deleteSelectedPrizeButton.Click += deleteSelectedPrizeButton_Click;
+            deleteSelectedPrizeButton.Click += removeSelectedPrizesButton_Click;
             // 
             // prizesLabel
             // 
@@ -221,7 +215,6 @@
             prizesLabel.Size = new Size(106, 46);
             prizesLabel.TabIndex = 22;
             prizesLabel.Text = "Prizes";
-            prizesLabel.Click += prizesLabel_Click;
             // 
             // prizesListBox
             // 
@@ -231,7 +224,6 @@
             prizesListBox.Name = "prizesListBox";
             prizesListBox.Size = new Size(358, 189);
             prizesListBox.TabIndex = 21;
-            prizesListBox.SelectedIndexChanged += prizesListBox_SelectedIndexChanged;
             // 
             // createTournamentButton
             // 
@@ -274,7 +266,6 @@
             Margin = new Padding(6);
             Name = "CreateTournamentForm";
             Text = "Create Tournament";
-            Load += CreateTournamentForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

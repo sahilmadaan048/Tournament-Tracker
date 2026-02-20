@@ -17,27 +17,13 @@ namespace TrackerUI
     {
         public List<PersonModel> availableTeamMembers = GlobalConfig.Connection.GetPerson_All();
         public List<PersonModel> selectedTeamMembers = new List<PersonModel>();
-        //private ITeamRequester callingForm;
-        public CreateTeamForm()
+        private ITeamRequester callingForm;
+        public CreateTeamForm(ITeamRequester caller)
         {
             InitializeComponent();
             //CreateSampleData();
             WireUpLists();
-        }
-
-        private void teamOneScoreLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void teamOneScoreValue_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CreateTeamForm_Load(object sender, EventArgs e)
-        {
-
+            callingForm = caller;
         }
 
         private void createMemberButton_Click(object sender, EventArgs e)

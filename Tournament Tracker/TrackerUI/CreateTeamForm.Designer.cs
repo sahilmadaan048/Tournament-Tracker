@@ -216,7 +216,6 @@
             firstNameValue.Size = new Size(214, 52);
             firstNameValue.TabIndex = 22;
             firstNameValue.Text = " ";
-            firstNameValue.TextChanged += teamOneScoreValue_TextChanged;
             // 
             // firstName
             // 
@@ -228,7 +227,6 @@
             firstName.Size = new Size(160, 41);
             firstName.TabIndex = 21;
             firstName.Text = "First Name";
-            firstName.Click += teamOneScoreLabel_Click;
             // 
             // firstNameLabel
             // 
@@ -240,7 +238,6 @@
             firstNameLabel.Size = new Size(160, 41);
             firstNameLabel.TabIndex = 21;
             firstNameLabel.Text = "First Name";
-            firstNameLabel.Click += teamOneScoreLabel_Click;
             // 
             // teamMembersListBox
             // 
@@ -302,7 +299,6 @@
             Controls.Add(createTeamLabel);
             Name = "CreateTeamForm";
             Text = "Create Team";
-            Load += CreateTeamForm_Load;
             createMemberGroupBox.ResumeLayout(false);
             createMemberGroupBox.PerformLayout();
             ResumeLayout(false);
