@@ -308,7 +308,7 @@ namespace TrackerLibrary.Data_Access
                 {
                     // Load all of the matchups from the file
                     // Get the top id and add one
-                    // Store the if
+                    // Store the id
                     // Save the matchup record
                     matchup.SaveMatchupToFile();
                 }

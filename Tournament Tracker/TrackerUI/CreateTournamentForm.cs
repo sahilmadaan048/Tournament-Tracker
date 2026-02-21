@@ -70,7 +70,7 @@ namespace TrackerUI
 
         public void TeamComplete(TeamModel model)
         {
-            selectedTeams.Add(model);
+            availableTeams.Add(model);
             WireUpLists();
         }
 

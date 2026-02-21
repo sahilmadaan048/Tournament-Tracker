@@ -25,7 +25,7 @@ namespace TrackerUI
             WireUpLists();
             callingForm = caller;
         }
-
+        
         private void createMemberButton_Click(object sender, EventArgs e)
         {
             if (ValidateForm())
@@ -127,9 +127,13 @@ namespace TrackerUI
             t.TeamName = teamNameValueValue.Text;
             t.TeamMembers = selectedTeamMembers;
             
-            GlobalConfig.Connection.CreateTeam(t);
-            
-            // not complete 
+            t = GlobalConfig.Connection.CreateTeam(t);
+
+            // this line is important to set the id of the team model that is being passed in,
+            // because the team model that is being passed in is the same one that is being 
+            // used in the tournament entry form, and we need to have the id of the team model to be 
+            // able to link the team model to the tournament entry form
+            callingForm.TeamComplete(t);
             this.Close();
         }
     }

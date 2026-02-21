@@ -7,6 +7,7 @@ using TrackerLibrary.Models;
 using System.Data;
 using Microsoft.Data.SqlClient;
 using Dapper;
+using Azure.Core.GeoJson;
 
 namespace TrackerLibrary.DataAccess
 {
@@ -151,9 +152,51 @@ namespace TrackerLibrary.DataAccess
 
         public void SaveTournamentRounds(IDbConnection connection, TournamentModel model)
         {
-            var p = new DynamicParameters();
-            return;
-        }
+            foreach (List<MatchupModel> round in model.Rounds)
+            {
+                foreach (MatchupModel matchup in round)
+                {
+                    var p = new DynamicParameters(); 
+                    p.Add("@TournamentId", model.Id);
+                    p.Add("@MatchupRound", matchup.MatchupRound);
+                    p.Add("@Id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+
+                    connection.Execute("[dbo].[spMatchups_Insert]", p, commandType: CommandType.StoredProcedure);
+
+                    matchup.Id = p.Get<int>("@Id");
+
+                    foreach (MatchupEntryModel entry in matchup.Entries)
+                    {
+                        p = new DynamicParameters();
+
+                        p.Add("@MatchupId", matchup.Id);
+
+                        if (entry.ParentMatchup == null)
+                        {
+                            p.Add("@ParentMatchupId", null);
+                        }
+                        else
+                        {
+                            p.Add("@ParentMatchupId", entry.ParentMatchup.Id);
+                        }
+
+                        if (entry.TeamCompeting == null)
+                        {
+                            p.Add("@TeamCompetingId", null);
+                        }
+                        else
+                        {
+                            p.Add("@TeamCompetingId", entry.TeamCompeting.Id);
+                        }
+
+                        p.Add("@Id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+                        connection.Execute("[dbo].[spMatchupEntries_Insert]", p, commandType: CommandType.StoredProcedure);
+                    }
+                }
+            }   
+        }    
 
         /// <summary>
         /// Returns a list of all people fropm the database
